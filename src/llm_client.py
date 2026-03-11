@@ -1,7 +1,8 @@
 import os
 from dotenv import load_dotenv
 #import openai
-import google.genai as genai
+#import google.genai as genai
+import google.generativeai as genai
 import anthropic
 from mistralai import Mistral
 
@@ -27,9 +28,9 @@ def call_llm(system_prompt, user_message, provider, model=None, temperature=0.2,
 
     
     if provider == "genai":
-        genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+        genai.configure(api_key=os.getenv("GEMINI_API_KEY_llm_2"))
 
-        model = model or "gemini-1.5-flash"
+        model = model or "gemini-2.0-flash"
 
         model_client = genai.GenerativeModel(model)
 
