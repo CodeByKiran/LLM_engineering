@@ -1,0 +1,21 @@
+llm_sentiment,llm_confidence,llm_key_issue,llm_is_safety,review_id
+Positive,0.99,,False,1502
+Positive,0.99,,False,2587
+Positive,0.99,,False,2654
+Positive,0.95,,False,1056
+Positive,0.95,,False,706
+Negative,0.98,damaged product and chemical odor,True,107
+Positive,0.99,,False,590
+Positive,0.98,,False,2469
+Positive,0.98,,False,2414
+Negative,0.98,damaged product and chemical odor,True,1601
+Neutral,0.85,delayed delivery and damaged packaging,False,2465
+Positive,0.99,,False,229
+Positive,0.99,,False,916
+Positive,0.98,,False,795
+Negative,0.98,product failure and warranty denial,False,3022
+Neutral,0.75,damaged packaging,False,3544
+Positive,0.99,,False,1074
+Positive,0.99,,False,3352
+Positive,0.98,,False,1745
+Negative,0.99,product failure and poor customer service,False,1085
