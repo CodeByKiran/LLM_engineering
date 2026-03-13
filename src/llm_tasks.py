@@ -17,7 +17,6 @@ from src.prompt_templates import (
 )
 from utils.json_parser import safe_parse_json
 
-
 ############################################
 # SENTIMENT ANALYSIS
 ############################################
@@ -37,8 +36,6 @@ def batch_sentiment(df, provider="mistral", delay=0.5):
         time.sleep(delay) #Rate Limiting 
 
     return pd.DataFrame(results)
-
-
 
 
 
@@ -68,8 +65,6 @@ def batch_summarize(df, provider="mistral", delay=0.5):
         time.sleep(delay)
 
     return pd.DataFrame(results)
-
-
 
 
 
@@ -103,14 +98,10 @@ def batch_extract_entities(df, provider="mistral", delay=0.5):
 
 
 
-
-
 ############################################
 #  TOPIC LABELING
 ############################################
 def label_topic(keywords, provider="mistral"):
-
-
 
     user_msg = build_topic_label_prompt(keywords)
 
