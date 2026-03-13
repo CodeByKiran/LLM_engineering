@@ -34,6 +34,9 @@ Review:
 
 
 
+
+
+
 #####################################################################
 ##########               ENTITY PROMPT                     ##########
 #####################################################################
@@ -64,3 +67,35 @@ Example:
 }}
 """
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####################################################################
+##########               Topic Labeling                    ##########
+#####################################################################
+TOPIC_LABEL_SYSTEM = """
+You are a topic labeler for customer review analytics.
+
+Given a list of keywords from a topic cluster, generate a short,
+clear label (2–4 words) that captures what customers are discussing.
+
+Respond ONLY with the label.
+"""
+
+def build_topic_label_prompt(keywords):
+
+    return f"""
+Keywords: {keywords}
+
+Label:
+"""

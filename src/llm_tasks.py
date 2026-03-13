@@ -48,11 +48,6 @@ def batch_sentiment(df, provider="mistral", delay=0.5):
 
 def batch_summarize(df, provider="mistral", delay=0.5):
 
-    from src.prompt_templates import (
-        SUMMARIZATION_SYSTEM,
-        build_summarization_prompt
-    )
-
     results = []
 
     for _, row in tqdm(df.iterrows(), total=len(df)):
@@ -83,11 +78,6 @@ def batch_summarize(df, provider="mistral", delay=0.5):
 ############################################
 
 def batch_extract_entities(df, provider="mistral", delay=0.5):
-
-    from src.prompt_templates import (
-        ENTITY_SYSTEM,
-        build_entity_prompt
-    )
 
     results = []
 
@@ -120,10 +110,7 @@ def batch_extract_entities(df, provider="mistral", delay=0.5):
 ############################################
 def label_topic(keywords, provider="mistral"):
 
-    from src.prompt_templates import (
-        TOPIC_LABEL_SYSTEM,
-        build_topic_label_prompt
-    )
+
 
     user_msg = build_topic_label_prompt(keywords)
 
