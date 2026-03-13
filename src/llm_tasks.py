@@ -5,7 +5,16 @@ from tqdm import tqdm
 import sys
 sys.path.append("..")
 from src.llm_client import call_llm
-from src.prompt_templates import SENTIMENT_SYSTEM,build_sentiment_prompt
+from src.prompt_templates import (
+    SENTIMENT_SYSTEM,
+    build_sentiment_prompt,
+    ENTITY_SYSTEM,
+    build_entity_prompt,
+    SUMMARIZATION_SYSTEM,
+    build_summarization_prompt,
+    TOPIC_LABEL_SYSTEM,
+    build_topic_label_prompt
+)
 from utils.json_parser import safe_parse_json
 
 
@@ -30,36 +39,29 @@ def batch_sentiment(df, provider="mistral", delay=0.5):
     return pd.DataFrame(results)
 
 
+
+
+
 ############################################
 #  SUMMARIZATION
 ############################################
 
 def batch_summarize(df, provider="mistral", delay=0.5):
 
-    SYSTEM = """
-You are a concise product review summarizer for an e-commerce analytics team.
-
-Rules:
-- Write exactly ONE sentence (max 20 words)
-- Include the product aspect mentioned
-- Include what the customer felt
-- Do NOT start with 'The customer' or 'This review'
-- Do NOT add information not in the review
-"""
+    from src.prompt_templates import (
+        SUMMARIZATION_SYSTEM,
+        build_summarization_prompt
+    )
 
     results = []
 
     for _, row in tqdm(df.iterrows(), total=len(df)):
 
-        user = f"""
-Summarize this review:
-
-{row['review_text']}
-"""
+        user_msg = build_summarization_prompt(row["review_text"])
 
         summary = call_llm(
-            SYSTEM,
-            user,
+            SUMMARIZATION_SYSTEM,
+            user_msg,
             provider=provider
         )
 
@@ -73,45 +75,29 @@ Summarize this review:
     return pd.DataFrame(results)
 
 
+
+
+
 ############################################
-# 3️⃣ ENTITY EXTRACTION
+#  ENTITY EXTRACTION
 ############################################
 
 def batch_extract_entities(df, provider="mistral", delay=0.5):
 
-    SYSTEM = """
-You are a named entity extractor for product reviews.
-
-Extract entities and return ONLY valid JSON.
-
-Fields:
-- product_features
-- problems
-- praise
-- mentioned_timeframe
-"""
+    from src.prompt_templates import (
+        ENTITY_SYSTEM,
+        build_entity_prompt
+    )
 
     results = []
 
     for _, row in tqdm(df.iterrows(), total=len(df)):
 
-        user = f"""
-Extract the following from this review:
-
-- product_features: list of product aspects mentioned
-- problems: list of problems mentioned (empty list if none)
-- praise: list of things praised (empty list if none)
-- mentioned_timeframe: how long before issue occurred (or null)
-
-Review:
-"{row['review_text']}"
-
-Return ONLY JSON.
-"""
+        user_msg = build_entity_prompt(row["review_text"])
 
         raw = call_llm(
-            SYSTEM,
-            user,
+            ENTITY_SYSTEM,
+            user_msg,
             provider=provider
         )
 
@@ -126,30 +112,24 @@ Return ONLY JSON.
     return pd.DataFrame(results)
 
 
-############################################
-# 4️⃣ TOPIC LABELING
-############################################
 
+
+
+############################################
+#  TOPIC LABELING
+############################################
 def label_topic(keywords, provider="mistral"):
 
-    SYSTEM = """
-You are a topic labeler for customer review analytics.
+    from src.prompt_templates import (
+        TOPIC_LABEL_SYSTEM,
+        build_topic_label_prompt
+    )
 
-Given keywords from a topic cluster,
-generate a short label (2–4 words).
-
-Return ONLY the label.
-"""
-
-    user = f"""
-Keywords: {keywords}
-
-Label:
-"""
+    user_msg = build_topic_label_prompt(keywords)
 
     label = call_llm(
-        SYSTEM,
-        user,
+        TOPIC_LABEL_SYSTEM,
+        user_msg,
         provider=provider
     )
 

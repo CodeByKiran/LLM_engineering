@@ -1,4 +1,8 @@
 # src/prompt_templates.py
+
+#####################################################################
+##########               SENTIMENT PROMPT                  ##########
+#####################################################################
 SENTIMENT_SYSTEM = """
 You are an expert product review sentiment analyst.
 
@@ -28,6 +32,11 @@ Review:
 
 
 
+
+
+#####################################################################
+##########               ENTITY PROMPT                     ##########
+#####################################################################
 ENTITY_SYSTEM = """
 You are a named entity extractor for product reviews.
 Extract entities and return ONLY valid JSON — no explanation.
@@ -54,3 +63,4 @@ Example:
 "mentioned_timeframe": "2 weeks"
 }}
 """
+
