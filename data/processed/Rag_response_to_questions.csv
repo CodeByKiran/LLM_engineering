@@ -1,0 +1,52 @@
+,question,answer,source_ids
+0,What are the most common complaints about kitchen appliances?,"Based on the provided reviews, the most common complaints about kitchen appliances are:
+
+1. **Quality issues** – Customers expected better quality for products like the **SteamKing Rice Cooker** (#3602) and **CrispAir Fryer XL** (#2124, #3586).
+2. **Noise problems** – The **CrispAir Fryer XL** (#2221) has a loud grinding motor.
+3. **Safety hazards** – The **SliceMaster Food Processor** (#297) sparked upon use, posing a serious risk.","[3602, 2221, 2124, 3586, 297]"
+1,Are there any safety concerns I should know about?,"Yes, several products have reported safety concerns in the reviews:
+
+- **TurboBlend Pro 5000 (#2352)** and **SliceMaster Food Processor (#297)** sparked when plugged in, posing a fire or electrical hazard.
+- **CozySofa L-Shape Sectional (#2378)** and **FoamPure Electric Toothbrush (#4446)** overheated and stopped working after minimal use, which could also be dangerous.
+
+The **AromaSpa Diffuser (#3025)** had no reported safety issues. Exercise caution with the other products.","[2352, 2378, 4446, 3025, 297]"
+2,How do customers feel about the DreamRest mattress?,"Customers generally feel positively about the DreamRest Memory Foam Mattress, with most reviews praising its performance. Many describe it as ""outstanding"" (#3665, #3079) or ""great,"" exceeding expectations (#66). One reviewer called it ""genuinely impressive"" (#487), while another noted it’s ""average"" but functional (#3009). Overall, sentiment leans toward satisfaction.","[3009, 3665, 3079, 487, 66]"
+3,Which product category has the most delivery complaints?,"Based on the provided reviews, the **small appliances** category (including the FoamPure Electric Toothbrush and InstaBrew Coffee Maker) has the most delivery complaints. Both products were reported as being sent incorrectly twice and arriving defective [Review #1670, #4154].
+
+Other categories had delivery delays or damage but not repeated wrong-item issues.","[4440, 1670, 2465, 4525, 4154]"
+4,What do 5-star reviews say about ease of setup?,"Based on the provided reviews, 5-star ratings consistently highlight that products are **""easy to set up""** across multiple items:
+
+- **AirPurifier ProMax** (Reviews #4063, #1376)
+- **TurboBlend Pro 5000** (Review #374)
+- **MirrorPro LED Vanity Mirror** (Review #3151)
+
+The **SmartTV 55in 4K UHD** (Review #9) does not mention setup ease. (Only reviews explicitly stating ""easy to set up"" are cited.)","[4063, 1376, 374, 3151, 9]"
+5,Have any customers reported the product breaking within a week?,"Yes, multiple customers reported products breaking or cracking within a week. Specifically:
+
+- **AirPurifier ProMax** (plastic cracked within a week, Review #1296)
+- **MirrorPro LED Vanity Mirror** (plastic cracked within a week, Review #2105)
+- **AromaSpa Diffuser** (plastic cracked within a week, Review #965)","[1296, 3900, 2105, 965, 2324]"
+6,What is wrong with the AquaFlow showerhead?,"Based on the reviews, common issues with the AquaFlow Rainfall Showerhead include:
+
+1. **Quality control problems**: Some units arrived damaged (#1601) or emitted a chemical smell (#1601).
+2. **Noise issues**: One unit had a loud grinding noise from the motor (#1104).
+3. **Inconsistent performance**: Some users found its performance mediocre (#3581), while others praised it (#2634, #1963).
+
+Not all users experienced problems, but these defects were reported.","[1601, 1104, 2634, 1963, 3581]"
+7,Tell me about the noise levels of HomeNest products,"Based on the provided reviews:
+
+- The **CozySofa L-Shape Sectional** is described as ""quiet during operation"" (Review #3850).
+- The **GlowLight Floor Lamp** is also noted as ""quiet during operation"" (Review #24).
+- The **WoodCraft Bed Frame Queen** has a ""horrible grinding noise from day one,"" indicating a significant noise issue (Review #3162).
+- The **AirPurifier ProMax** reviews do not mention noise levels (Reviews #4772, #200).","[3850, 4772, 200, 3162, 24]"
+8,Which products have the best customer service feedback?,"Based on the provided reviews, **none of the products have positive customer service feedback**.
+
+- The **CloudPillow Set** has a complaint about poor customer service (Review #1974).
+- The **FoamPure Electric Toothbrush** also reflects negatively due to shipping errors and defects (Review #1670).
+- The **SoftTouch Luxury Towel Set** reviews focus on product quality, not customer service (Reviews #4316, #4625, #2030). No mention of service experiences.","[4316, 1974, 4625, 1670, 2030]"
+9,What is HomeNest's return policy?,"Based on the provided reviews, there is **no clear information** about HomeNest’s official return policy. However, multiple customers report difficulties with returns:
+
+- **CloudPillow Set (2-pack)**: One customer (#1974) mentions a ""nightmare"" trying to return the product due to no response from customer service.
+- **Damaged/Defective Items**: Several customers (#2847, #2802, #107) attempted returns for damaged or chemical-smelling products, but the reviews do not specify the policy details.
+
+For exact return policy terms, additional context is needed.","[1974, 4525, 2847, 2802, 107]"

@@ -83,3 +83,33 @@ Keywords: {keywords}
 
 Label:
 """
+
+
+
+#####################################################################
+##########                 RAG                             ##########
+#####################################################################
+
+RAG_SYSTEM = """
+You are HomeNest's customer review intelligence assistant.
+
+You answer questions about product quality, customer sentiment,
+and common issues based ONLY on the customer reviews provided.
+
+Rules:
+- Only use information present in the provided reviews
+- If the context does not contain enough information, say so clearly
+- Always cite which review IDs support your answer
+- Be concise: answer in 3–5 sentences maximum
+- Do NOT make up product specifications or policies
+"""
+
+RAG_USER = """
+Context (relevant customer reviews):
+---
+{context_block}
+---
+
+Question:
+{user_question}
+"""
