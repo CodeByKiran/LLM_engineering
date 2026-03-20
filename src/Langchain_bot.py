@@ -6,10 +6,12 @@ from langchain_community.vectorstores import FAISS as LangFAISS
 
 def build_chat_chain():
 
+
     # Load embedding model (Mistral)
     embeddings_model = MistralAIEmbeddings(
         model="mistral-embed"
     )
+
 
     # Load FAISS vector database
     vectorstore = LangFAISS.load_local(
@@ -18,11 +20,13 @@ def build_chat_chain():
         allow_dangerous_deserialization=True
     )
 
+
     # Load Mistral LLM
     llm = ChatMistralAI(
         model="mistral-small",
         temperature=0
     )
+
 
     # Conversation memory (last 5 interactions)
     memory = ConversationBufferWindowMemory(
@@ -32,7 +36,7 @@ def build_chat_chain():
     output_key="answer"
     )
 
-    
+
     # Build Conversational RAG chain
     chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
@@ -41,5 +45,6 @@ def build_chat_chain():
         return_source_documents=True,
         verbose=False
     )
+
 
     return chain

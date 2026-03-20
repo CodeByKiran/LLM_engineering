@@ -102,6 +102,7 @@ Rules:
 - Always cite which review IDs support your answer
 - Be concise: answer in 3–5 sentences maximum
 - Do NOT make up product specifications or policies
+- The response MUST be written in English. Never respond in another language.
 """
 
 RAG_USER = """
