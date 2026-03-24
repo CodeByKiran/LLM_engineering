@@ -1,0 +1,33 @@
+Review,Ground Truth,BERT Prediction,LLM Prediction,BERT Correct,LLM Correct
+This blender is amazing and works perfectly,positive,negative,the sentiment of the review is **positive**.,False,False
+Worst purchase I have ever made,negative,negative,"the sentiment of the review **""worst purchase i have ever made""** is:
+
+**negative**",True,False
+The product quality is decent for the price,neutral,negative,"the sentiment of this review is **neutral**.
+
+while the review mentions that the product quality is ""decent,"" which could lean slightly positive, the phrase ""for the price"" introduces a conditional or balanced perspective, making the overall sentiment more neutral. it doesn't express strong satisfaction (positive) or dissatisfaction (negative).",False,False
+Stopped working after two weeks,negative,negative,"the sentiment of the review **""stopped working after two weeks""** is **negative**. the statement expresses dissatisfaction with the product's performance.",True,False
+Absolutely love this device,positive,negative,"the sentiment of the review **""absolutely love this device""** is:
+
+**positive**",False,False
+Very noisy and poorly built,negative,negative,"the sentiment of the review **""very noisy and poorly built""** is **negative**.",True,False
+Great value for money,positive,negative,"the sentiment of the review **""great value for money""** is **positive**.",False,False
+Customer service was terrible,negative,negative,sentiment: **negative**,True,False
+Exceeded my expectations,positive,negative,"the sentiment of the review **""exceeded my expectations""** is **positive**.",False,False
+Not worth the price,negative,negative,"the sentiment of the review **""not worth the price""** is **negative**.",True,False
+Really happy with the performance,positive,negative,"the sentiment of the review **""really happy with the performance""** is:
+
+**positive**",False,False
+Broke within a month,negative,negative,"the sentiment of the review **""broke within a month""** is **negative**. the statement clearly expresses dissatisfaction or disappointment with the product's durability.",True,False
+Good design but average performance,neutral,negative,"the sentiment of the review **""good design but average performance""** is **neutral**.
+
+while the review contains both positive (""good design"") and negative (""average performance"") elements, the overall tone does not strongly lean toward either extreme. the mixed feedback balances out, resulting in a neutral classification.",False,False
+Terrible quality plastic,negative,negative,"the sentiment of the review **""terrible quality plastic""** is **negative**. the word ""terrible"" clearly expresses dissatisfaction or disapproval.",True,False
+Fantastic product,positive,negative,"the sentiment of the review **""fantastic product""** is **positive**.",False,False
+Waste of money,negative,negative,"the sentiment of the review **""waste of money""** is:
+
+**negative**",True,False
+Pretty good overall,positive,negative,"the sentiment of the review **""pretty good overall""** is **positive**.",False,False
+Very disappointing,negative,negative,"the sentiment of the review **""very disappointing""** is **negative**.",True,False
+Highly recommend this,positive,negative,"the sentiment of the review **""highly recommend this""** is **positive**.",False,False
+Not good at all,negative,negative,sentiment: **negative**,True,False
